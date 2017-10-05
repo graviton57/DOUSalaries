@@ -1,17 +1,16 @@
 # DOU Salaries for Android 
 
-
-Developers salaries in Ukraine. The data is based on anonymous survey by DOU.UA of full-time employees at top IT companies in Ukraine.
+Developers salaries in Ukraine. The data is based on anonymous survey by [DOU.UA](https://dou.ua/) of full-time employees at top IT companies in Ukraine.
  All wages are net (after taxes), monthly, USD. Office, admin and other expenses not included. 
  
- Salary surveys CSV data: github.com/devua/csv/tree/master/salaries. 
+ Salary surveys CSV data: https://github.com/devua/csv/tree/master/salaries. 
 
 
 ## Preview
 
 Widget|Demographics|Demographics 
 -------------|-----------------|-----------------
-![alt text](art/widget.png "Main Activity")  | ![alt text](art/demo1.png "Demographics") | ![alt text](art/demo3.png "Demographics") 
+![alt text](art/widget.png "Salaries Widget")  | ![alt text](art/demo1.png "Demographics") | ![alt text](art/demo3.png "Demographics") 
 
 
 By city|Demographics|By year
@@ -41,11 +40,20 @@ Feature request should be reported in the [issues section](https://github.com/gr
 - [Dagger2](https://google.github.io/dagger/)
 - [Retrofit2](http://square.github.io/retrofit/)
 - [Okhttp3](https://github.com/square/okhttp/)
-- [Butterknife](https://github.com/JakeWharton/butterknife)
-- [Greenrobot EventBus](http://greenrobot.org/eventbus/)
+- [ButterKnife](https://github.com/JakeWharton/butterknife)
+- [GreenRobot EventBus](http://greenrobot.org/eventbus/)
 - [Timber](https://github.com/JakeWharton/timber)
+- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+- [Calligraphy](https://github.com/chrisjenx/Calligraphy)
+- [LeakCanary](https://github.com/square/leakcanary)
+- [FireBase](https://firebase.google.com/)
+- [Joda-Time](http://joda-time.sourceforge.net/)
+- [Commons-csv](https://commons.apache.org/csv)
 - [Fresco - A powerful image downloading and caching library for Android](https://github.com/facebook/fresco/)
 
+## Testing reference resources
+- [Mockito](http://site.mockito.org/)
+- [Robolectric](http://robolectric.org/) 
 
 
 # License
