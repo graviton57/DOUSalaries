@@ -41,7 +41,7 @@ Feature request should be reported in the [issues section](https://github.com/gr
 - [Retrofit2](http://square.github.io/retrofit/)
 - [Okhttp3](https://github.com/square/okhttp/)
 - [ButterKnife](https://github.com/JakeWharton/butterknife)
-- [GreenRobot EventBus](http://greenrobot.org/eventbus/)
+- [EventBus(GreenRobot)](http://greenrobot.org/eventbus/)
 - [Timber](https://github.com/JakeWharton/timber)
 - [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
 - [Calligraphy](https://github.com/chrisjenx/Calligraphy)
@@ -49,7 +49,8 @@ Feature request should be reported in the [issues section](https://github.com/gr
 - [FireBase](https://firebase.google.com/)
 - [Joda-Time](http://joda-time.sourceforge.net/)
 - [Commons-csv](https://commons.apache.org/csv)
-- [Fresco - A powerful image downloading and caching library for Android](https://github.com/facebook/fresco/)
+- [Fresco](https://github.com/facebook/fresco/)
+- [SQLite-Android](https://github.com/graviton57/SqliteAndroid)
 
 ## Testing reference resources
 - [Mockito](http://site.mockito.org/)
