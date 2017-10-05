@@ -6,17 +6,6 @@ Developers salaries in Ukraine. The data is based on anonymous survey by DOU.UA 
  
  Salary surveys CSV data: github.com/devua/csv/tree/master/salaries. 
 
-## Project Structure
-### Data 
-It contains all the data(Shared Preferences, Local DB and Remote API) accessing and manipulating components
-### Injection
-Dependency providing classes using Dagger2
-### Events
-EventBus events classes that simplifies communication between Activitie and Fragments
-### UI
-View classes along with their corresponding Presenters
-### Utils
-Utility classes
 
 ## Preview
 
