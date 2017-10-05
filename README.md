@@ -1,8 +1,5 @@
 # DOU Salaries for Android 
 
-<p align="center">
-  <img src= "art/logo.png" >
-</p>
 
 Developers salaries in Ukraine. The data is based on anonymous survey by DOU.UA of full-time employees at top IT companies in Ukraine.
  All wages are net (after taxes), monthly, USD. Office, admin and other expenses not included. 
