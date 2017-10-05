@@ -23,14 +23,14 @@ Utility classes
 
 ## Preview
 
-Main Activity|Icons Activity 
--------------|-----------------
-![alt text](art/widget.png "Main Activity")  | ![alt text](art/demo1.png "Search Icons") 
+Widget|Demographics|Demographics 
+-------------|-----------------|-----------------
+![alt text](art/widget.png "Main Activity")  | ![alt text](art/demo1.png "Demographics") | ![alt text](art/demo3.png "Demographics") 
 
 
-Collections Activity|Detail Activity
--------------|-----------------
-![alt text](art/by_city.png "By cities") | ![alt text](art/demo2.png "Details")  
+By city|Demographics|By year
+-------------|-----------------|-----------------
+![alt text](art/by_city.png "By cities") | ![alt text](art/demo2.png "Demographics") | ![alt text](art/by_year.png "By year")  
 
 
 ## Contributing
