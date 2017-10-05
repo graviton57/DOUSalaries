@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Salaries tabs array-->
+    <string-array name="salaries_tab_titles">
+        <item>@string/salaries_tab_title_widget</item>
+        <item>@string/salaries_tab_title_year</item>
+        <item>@string/salaries_tab_title_city</item>
+        <item>@string/salaries_tab_title_demographics</item>
+    </string-array>
+
+    <!--Salaries tabs caption-->
+    <string name="salaries_tab_title_widget">Widget</string>
+    <string name="salaries_tab_title_year">By year</string>
+    <string name="salaries_tab_title_city">By city</string>
+    <string name="salaries_tab_title_demographics">Demographics</string>
+
+
+    <!--if user select 'вся Украина' remove from query cities parameter-->
+    <string name="all_ukraine" translatable="false">вся Украина</string>
+    <!--if user select 'не Киев' build query where city<>'Киев'-->
+    <string name="city_not_kiev" translatable="false">не Киев</string>
+    <!--New name for city 'Кировоград'-->
+    <string name="city_kropiv" translatable="false">Кропивницкий</string>
+
+    <!--this string uses in buildSelectionsWithYear()-->
+    <string name="city_kiev" translatable="false">Киев</string>
+    <string name="city_lviv" translatable="false">Львов</string>
+    <string name="city_kharkiv" translatable="false">Харьков</string>
+    <!--New name for city 'Днепропетровск'-->
+    <string name="city_dnipro" translatable="false">Днепр</string>
+    <string name="city_odessa" translatable="false">Одесса</string>
+    <!--Old cities names-->
+    <string name="city_dnipropetrovsk" translatable="false">Днепр.</string>
+    <string name="city_kirovograd" translatable="false">Кировоград</string>
+    <!--Cities names strings array-->
+    <string-array name="array_cities">
+        <item>@string/all_ukraine</item>
+        <item>@string/city_kiev</item>
+        <item>@string/city_not_kiev</item>
+        <item>Винница</item>
+        <item>@string/city_dnipro</item>
+        <item>Другой</item>
+        <item>Житомир</item>
+        <item>Запорожье</item>
+        <item>Ивано-Франковск</item>
+        <item>@string/city_kropiv</item>
+        <item>Луцк</item>
+        <item>@string/city_lviv</item>
+        <item>Мариуполь</item>
+        <item>Николаев</item>
+        <item>@string/city_odessa</item>
+        <item>Полтава</item>
+        <item>Ровно</item>
+        <item>Сумы</item>
+        <item>Тернополь</item>
+        <item>Тирасполь</item>
+        <item>Удаленно</item>
+        <item>Ужгород</item>
+        <item>@string/city_kharkiv</item>
+        <item>Херсон</item>
+        <item>Хмельницкий</item>
+        <item>Черкассы</item>
+        <item>Чернигов</item>
+        <item>Черновцы</item>
+    </string-array>
+
+    <string name="junior_software_engineer" translatable="false">Junior Software Engineer</string>
+    <string name="software_engineer" translatable="false">Software Engineer</string>
+    <string name="senior_software_engineer" translatable="false">Senior Software Engineer</string>
+
+    <string-array name="array_job_title">
+        <item>@string/software_engineer</item>
+        <item>@string/junior_software_engineer</item>
+        <item>@string/senior_software_engineer</item>
+        <item>QA engineer</item>
+        <item>Junior QA engineer</item>
+        <item>Project manager</item>
+        <item>Senior QA engineer</item>
+        <item>Technical Lead</item>
+        <item>HR</item>
+        <item>Designer</item>
+        <item>DevOps</item>
+        <item>HTML coder</item>
+        <item>Team lead</item>
+        <item>Business analyst</item>
+        <item>Marketing</item>
+        <item>Sysadmin</item>
+        <item>Support</item>
+        <item>Product Manager</item>
+        <item>Sales manager</item>
+        <item>QA Tech Lead</item>
+        <item>Data Scientist / Data Analyst</item>
+        <item>Senior Project Manager / Program Manager</item>
+        <item>System Architect</item>
+        <item>Director of Engineering / Program Director</item>
+        <item>Talent Researcher</item>
+        <item>Technical writer</item>
+        <item>DBA</item>
+        <item>Scrum Master</item>
+        <item>Game designer</item>
+        <item>Research Engineer</item>
+        <item>ERP / CRM</item>
+        <item>Security Specialist</item>
+</string-array>
+
+    <string name="language_java" translatable="false">Java</string>
+    <string name="language_none" translatable="false"> </string>
+
+    <string-array name="prog_lang">
+        <item>@string/language_none</item>
+        <item>@string/language_java</item>
+        <item>JavaScript</item>
+        <item>C#/.NET</item>
+        <item>PHP</item>
+        <item>C++</item>
+        <item>Python</item>
+        <item>Swift</item>
+        <item>Ruby/Rails</item>
+        <item>Objective-C</item>
+        <item>SQL</item>
+        <item>C</item>
+        <item>Other</item>
+        <item>Scala</item>
+        <item>1С</item>
+        <item>Golang</item>
+        <item>Delphi</item>
+        <item>Perl</item>
+        <item>Erlang</item>
+        <item>Flex/Flash/AIR</item>
+        <item>ABAP</item>
+        <item>Haskell</item>
+    </string-array>
+
+      <string-array name="array_period_date" >
+        <item>Jun 2017</item>
+        <item>Dec 2016</item>
+        <item>May 2016</item>
+        <item>Dec 2015</item>
+        <item>May 2015</item>
+        <item>Dec 2014</item>
+        <item>May 2014</item>
+        <item>Dec 2013</item>
+        <item>May 2013</item>
+        <item>Dec 2012</item>
+        <item>May 2012</item>
+        <item>Dec 2011</item>
+    </string-array>
+
+    <!--<string-array name="array_period_titles" >
+        <item>июнь-июль 2017</item>
+        <item>декабрь 2016</item>
+        <item>май 2016</item>
+        <item>декабрь 2015</item>
+        <item>май 2015</item>
+        <item>декабрь 2014</item>
+        <item>май 2014</item>
+        <item>декабрь 2013</item>
+        <item>май 2013</item>
+        <item>декабрь 2012</item>
+        <item>май 2012</item>
+        <item>декабрь 2011</item>
+    </string-array>-->
+</resources>

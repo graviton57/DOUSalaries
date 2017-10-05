@@ -1,0 +1,5 @@
+ext {
+     BASE_API_URL = "http://api.dou.ua/";
+     BASE_DOU_URL = "http://dou.ua/";
+     BASE_SALARY_URL = "https://raw.githubusercontent.com/graviton57/csv/master/salaries/"
+}

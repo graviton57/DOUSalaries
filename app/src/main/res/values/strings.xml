@@ -1,0 +1,96 @@
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">DOU Salaries</string>
+
+    <!--Menu strings-->
+    <string name="menu_item_home">Home</string>
+    <string name="menu_item_forum">Forum</string>
+    <string name="menu_item_articles">Articles</string>
+    <string name="menu_item_salaries">Salaries</string>
+    <string name="menu_item_jobs">Jobs</string>
+    <string name="menu_item_events">Events</string>
+    <string name="menu_item_legal">Legal</string>
+    <string name="menu_item_about">About</string>
+    <string name="menu_item_search">Search</string>
+    <string name="menu_item_settings">Settings</string>
+    <string name="menu_item_share">Share</string>
+    <string name="menu_item_sep_addit">Additional</string>
+    <string name="menu_item_sync">Reload data</string>
+
+    <!--Errors strings-->
+    <string name="error_server">Server error</string>
+    <string name="error_server_not_available">Server not available</string>
+    <string name="error_not_found">Not found. Please try again.</string>
+    <string name="error_default">Error occurred: %s</string>
+    <string name="error_unauthorized">Unauthorized access</string>
+    <string name="error_connection">Please check your internet connection</string>
+    <string name="error_no_data">No data</string>
+
+    <!--gender strings -->
+    <string name="gender_male" translatable="false">мужской</string>
+    <string name="gender_famale" translatable="false">женский</string>
+
+    <!--preference strings-->
+    <string name="pref_sync_key" translatable="false">pref_sync_key</string>
+    <string name="pref_sync_default_value" translatable="false">86400</string>
+
+    <!--widget strings-->
+    <string name="title_widget_detail">Dou articles</string>
+    <string name="empty_articles_list">Empty articles list!</string>
+
+    <!--Pie charts strings-->
+    <string name="pie_gender">Gender</string>
+    <string name="pie_eng_level">English \n level</string>
+    <string name="pie_city">City</string>
+    <string name="pie_education">Education</string>
+    <string name="pie_company_size">Company\n size</string>
+    <string name="pie_company_type">Company\n type</string>
+    <string name="chart_item_experience">Experience</string>
+    <string name="chart_item_age">Age</string>
+    <string name="chart_item_job_titles">Job titles</string>
+
+    <!--Experience strings-->
+    <string name="experience_over_doxuya" translatable="false">10 и более лет</string>
+    <string name="experience_april" translatable="false">меньше 3 месяцев</string>
+
+    <string name="experience_less_than_year">less than 1 year</string>
+
+    <!--Salaries strings-->
+    <string name="salaries_developers">Developers salaries</string>
+    <string name="salaries_city">City</string>
+    <string name="salaries_job_title">Job Title</string>
+    <string name="salaries_programming_language">Programming language</string>
+
+
+    <string name="salaries_q1">I quartile</string>
+    <string name="salaries_median">median</string>
+    <string name="salaries_q3">III quartile</string>
+    <string name="salaries_format_count"><xliff:g id="salariesCount">%1d</xliff:g> salaries</string>
+    <string name="salaries_format_salary">$ <xliff:g id="salary">%1d</xliff:g></string>
+    <string name="salaries_format_marker_short"><xliff:g id="date">%1s</xliff:g>\n<xliff:g id="salariesCount">%2d</xliff:g> salaries\n$ <xliff:g id="salary">%3d</xliff:g></string>
+    <string name="exp_format_marker"><xliff:g id="years">%1s</xliff:g> years\nCount:<xliff:g id="counts">%2s</xliff:g></string>
+    <string name="exp_format_over_10">over 10 years</string>
+    <string name="salaries_format_experience">Experience: <xliff:g id="experience">%s</xliff:g> - 10+ years</string>
+
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6468672020434544/2480428306</string>
+
+    <!--Description widget info strings-->
+    <string name="link_salary_surveys">
+        <![CDATA[Salary surveys CSV data:<a href="http://github.com/devua/csv/tree/master/salaries">github.com/devua/csv/tree/master/salaries</a>]]>
+    </string>
+    <string name="link_more_details">
+        <![CDATA[More details in the article:<a href="http://dou.ua/lenta/articles/salary-report-june-july-2017">dou.ua/lenta/articles/salary-report-june-july-2017</a>]]>
+    </string>
+    <string name="link_max_email">
+        <![CDATA[The data is based on anonymous survey by DOU.UA of full-time employees at top IT companies in Ukraine. All wages are net (after taxes), monthly, USD. Office, admin and other expenses not included. For more info <a href="mailto:max@dou.ua">max@dou.ua</a>]]>
+    </string>
+
+    <string name="title_activity_salaries">SalariesActivity</string>
+
+    <string name="sync_start">Syncing…</string>
+    <string name="sync_complete">Sync complete!</string>
+
+    <string name="format_app_version">Version:<xliff:g id="version">%1s</xliff:g></string>
+    <string name="about">Igor Gavrilyuk 2017</string>
+
+
+</resources>

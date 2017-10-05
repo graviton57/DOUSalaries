@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.havrylyuk.dou.ui.main.MainActivity"
+        tools:showIn="@layout/activity_main"
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+   <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+       <!--fontPath="fonts/Roboto-Light.ttf"-->
+       <TextView
+           android:id="@+id/txt_error"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:drawablePadding="15dp"
+           android:drawableTop="@drawable/ic_error"
+           android:gravity="center"
+           android:text="@string/error_no_data"
+           android:textAppearance="?android:textAppearanceLarge"
+           android:textColor="@color/colorText"
+           android:visibility="gone"
+           fontPath="fonts/Roboto-Regular.ttf"
+           tools:ignore="MissingPrefix" />
+   </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.havrylyuk.dou.ui.main.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true"
+                    app:contentPaddingRight="16dp"
+                    app:contentPaddingLeft="16dp"
+                    app:contentPaddingTop="@dimen/widget_text_margin"
+                    app:contentPaddingBottom="@dimen/widget_text_margin">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:text="@string/salaries_city"
+                                android:layout_marginTop="@dimen/widget_text_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Spinner
+                                android:id="@+id/spinner_city"
+                                style="@style/salarySpinnerItemSelectedStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </Spinner>
+
+                            <TextView
+                                android:text="@string/salaries_job_title"
+                                android:layout_marginTop="@dimen/widget_text_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Spinner
+                                android:id="@+id/spinner_job_title"
+                                style="@style/salarySpinnerItemSelectedStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </Spinner>
+
+                            <TextView
+                                android:text="@string/salaries_programming_language"
+                                android:layout_marginTop="@dimen/widget_text_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <Spinner
+                                android:id="@+id/spinner_lang"
+                                style="@style/salarySpinnerItemSelectedStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </Spinner>
+
+                            <TextView
+                                android:id="@+id/experience"
+                                tools:text="@string/salaries_format_experience"
+                                android:layout_marginTop="@dimen/widget_text_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <SeekBar
+                                android:id="@+id/seek_bar_exp"
+                                android:max="10"
+                                tools:progress="5"
+                                android:layout_marginTop="@dimen/widget_text_margin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/quartile_grid"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/widget_text_margin"
+                            android:layout_marginBottom="@dimen/widget_text_margin">
+
+                            <TextView
+                                android:id="@+id/q1_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="@string/salaries_q1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                                android:textColor="@color/colorDetailAccent" />
+
+                            <TextView
+                                android:id="@+id/q1_salary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                tools:text="$1000" />
+
+                            <TextView
+                                android:id="@+id/median_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:text="@string/salaries_median"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                                android:textColor="@color/colorDetailAccent" />
+
+                            <TextView
+                                android:id="@+id/median_salary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                tools:text="$1500" />
+
+                            <TextView
+                                android:id="@+id/q3_label"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="@string/salaries_q3"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                                android:textColor="@color/colorDetailAccent" />
+
+                            <TextView
+                                android:id="@+id/q3_salary"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                tools:text="$2500" />
+
+                            <TextView
+                                android:id="@+id/salaries_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:layout_marginEnd="8dp"
+                                android:gravity="end"
+                                android:paddingTop="8dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                                android:textColor="@color/colorDetailAccent"
+                                android:textSize="14sp"
+                                tools:text="191 salaries"
+                                android:layout_marginRight="8dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/salary_details"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:autoLink="web"
+                    tools:text="@string/link_more_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/salary_surveys"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:autoLink="web"
+                    tools:text="@string/link_salary_surveys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/salary_description"
+                    android:paddingTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:autoLink="email"
+                    tools:text="@string/link_max_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
+

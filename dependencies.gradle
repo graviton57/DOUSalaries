@@ -1,0 +1,44 @@
+ext {
+    // Library dependencies
+    supportVersion = '26.1.0'
+    retrofitVersion = '2.1.0'
+    okhttpVersion = '3.4.1'
+    okHttpLoggingVersion = '3.2.0'
+    retrofitRxJavaAdapter = '1.0.0'
+
+    timberVersion = '4.3.1'
+    butterKnifeVersion = '8.4.0'
+    daggerVersion = '2.5'
+
+    rxJava2Version = '2.0.5'
+    rxAndroidVersion = '2.0.1'
+    rxBindingsVersion = '2.0.0'
+
+    daggerVersion = '2.5'
+    calligraphyVersion = '2.3.0'
+
+    signpostCoreVersion = '1.2.1.2'
+    jsoupVersion = '1.10.2'
+    okhttpSignpostVersion = '1.1.0'
+
+    rxJava2 = '2.0.5'
+    rxAndroid = '2.0.1'
+    rxBindings = '2.0.0'
+    sqliteAndroid = '1.0.1'
+
+    androidMPChart = 'v3.0.2'
+    eventBusVersion = '3.0.0'
+    jodaTimeVersion = '2.9.1'
+    frescoVersion = '1.1.0'
+
+    fireBaseJobDispatcher = '0.8.2'
+    fireBaseVersion = '11.4.2'
+
+    //Testing
+    leakCanaryVersion = '1.5.1'
+    junitVersion = '4.12'
+    espressoVersion = '2.2.2'
+    mockitoVersion = '2.7.1'
+    robolectricVersion = '3.3.2'
+
+}

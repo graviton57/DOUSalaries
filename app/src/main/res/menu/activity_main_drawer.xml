@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_sync"
+            android:icon="@drawable/settings"
+            android:title="@string/menu_item_sync" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/share_variant"
+            android:title="@string/menu_item_share" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="@string/menu_item_about" />
+
+    </group>
+
+
+</menu>
