@@ -62,7 +62,7 @@ public class SyncService extends IntentService {
                 /*if (AppUtils.isNetworkAvailable(this)) {
                     saveSalariesFromNetwork(file);//from network repository  load time   30 sec
                 }*/
-                insetSalariesFromAssets(file);//from network repository load time  28 sec
+                insetSalariesFromAssets(file);//from assets repository load time  28 sec
             }
             long lEndTime = System.nanoTime();
             long timeElapsed = lEndTime - lStartTime;

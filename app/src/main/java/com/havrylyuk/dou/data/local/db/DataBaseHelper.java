@@ -42,7 +42,6 @@ import org.sqlite.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.Callable;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -109,102 +108,90 @@ public class DataBaseHelper implements IDataBaseHelper {
     public Observable<SalaryDataForWidget> getSalaryForWidget(final long period, final String language,
                                                               final String city, final String jobTitle,
                                                               final int experience) {
-        return Observable.fromCallable(new Callable<SalaryDataForWidget>() {
-            @Override
-            public SalaryDataForWidget call() throws Exception {
-                SalaryDataForWidget salary = new SalaryDataForWidget();
-                Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
-                        SQLUtils.columnsForWidget,
-                        SQLUtils.buildSelectionsForWidget(context, city, language),
-                        SQLUtils.buildSelectionsForWidgetArgs(context, String.valueOf(period),
-                                language, city, jobTitle, experience),
-                        null, null,
-                        SalaryEntry.SALARIES_PER_MONTH);
-                try {
-                    if (cursor != null && cursor.moveToFirst()) {
-                        int q1 = (int) cursor.getDouble(0);
-                        int median = (int) cursor.getDouble(1);
-                        int q3 = (int) cursor.getDouble(2);
-                        int count = (int) cursor.getDouble(3);
-                        Timber.d("SalaryData q1=%d , median=%d , q3=%d , count=%d", q1, median, q3, count);
-                        salary.setQ1(q1);
-                        salary.setMedian(median);
-                        salary.setQ3(q3);
-                        salary.setSalariesCount(count);
-                    }
-                } finally {
-                    if (cursor != null) {
-                        cursor.close();
-                    }
+        return Observable.fromCallable(() -> {
+            SalaryDataForWidget salary = new SalaryDataForWidget();
+            Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
+                    SQLUtils.columnsForWidget,
+                    SQLUtils.buildSelectionsForWidget(context, city, language),
+                    SQLUtils.buildSelectionsForWidgetArgs(context, String.valueOf(period),
+                            language, city, jobTitle, experience),
+                    null, null,
+                    SalaryEntry.SALARIES_PER_MONTH);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    int q1 = (int) cursor.getDouble(0);
+                    int median = (int) cursor.getDouble(1);
+                    int q3 = (int) cursor.getDouble(2);
+                    int count = (int) cursor.getDouble(3);
+                    Timber.d("SalaryData q1=%d , median=%d , q3=%d , count=%d", q1, median, q3, count);
+                    salary.setQ1(q1);
+                    salary.setMedian(median);
+                    salary.setQ3(q3);
+                    salary.setSalariesCount(count);
                 }
-                return salary;
+            } finally {
+                if (cursor != null) {
+                    cursor.close();
+                }
             }
+            return salary;
         });
     }
 
     @Override
     public Observable<List<ChartItem>> getSalaryForCities(final long period) {
-        return  Observable.fromCallable(new Callable<List<ChartItem>>(){
-            @Override
-            public List<ChartItem> call() throws Exception {
-                Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
-                        SQLUtils.columnsForCitiesAndYears,
-                        SQLUtils.buildSelectionsWithYear(context),
-                        SQLUtils.buildSelectionsArgsWithYar(String.valueOf(period)),
-                        SalaryEntry.SALARIES_PROG_LANG + " , " + SalaryEntry.SALARIES_JOB_TITLE +
-                                " , " + SalaryEntry.SALARIES_CITY,
-                        " COUNT(*) > " + Config.MIN_RESULT_COUNT,
-                        SalaryEntry.SALARIES_MEDIAN + " DESC "); //junior < engineer < senior
-                List<ChartItem> res = buildChartItem(cursor);
-                cursor.close();
-                return res;
-            }
-        } );
+        return  Observable.fromCallable(() -> {
+            Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
+                    SQLUtils.columnsForCitiesAndYears,
+                    SQLUtils.buildSelectionsWithYear(context),
+                    SQLUtils.buildSelectionsArgsWithYar(String.valueOf(period)),
+                    SalaryEntry.SALARIES_PROG_LANG + " , " + SalaryEntry.SALARIES_JOB_TITLE +
+                            " , " + SalaryEntry.SALARIES_CITY,
+                    " COUNT(*) > " + Config.MIN_RESULT_COUNT,
+                    SalaryEntry.SALARIES_MEDIAN + " DESC "); //junior < engineer < senior
+            List<ChartItem> res = buildChartItem(cursor);
+            cursor.close();
+            return res;
+        });
     }
 
     @Override
     public Observable<List<ChartItem>> getSalaryForYears(final String city) {
-        return  Observable.fromCallable(new Callable<List<ChartItem>>(){
-            @Override
-            public List<ChartItem> call() throws Exception {
-                Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
-                        SQLUtils.columnsForCitiesAndYears,
-                        SQLUtils.buildSelectionsWithCity(context, city),
-                        SQLUtils.buildSelectionsArgsWithCity(context, city),
-                        SalaryEntry.SALARIES_PERIOD + " , " + SalaryEntry.SALARIES_JOB_TITLE +
-                                " , " + SalaryEntry.SALARIES_PROG_LANG,
-                        " COUNT(*) > " + Config.MIN_RESULT_COUNT,
-                        SalaryEntry.SALARIES_PERIOD);
-                List<ChartItem> res = buildLineChartItem(cursor);
-                cursor.close();
-                return res;
-            }
-        } );
+        return  Observable.fromCallable(() -> {
+            Cursor cursor = db.query(SalaryEntry.TABLE_NAME,
+                    SQLUtils.columnsForCitiesAndYears,
+                    SQLUtils.buildSelectionsWithCity(context, city),
+                    SQLUtils.buildSelectionsArgsWithCity(context, city),
+                    SalaryEntry.SALARIES_PERIOD + " , " + SalaryEntry.SALARIES_JOB_TITLE +
+                            " , " + SalaryEntry.SALARIES_PROG_LANG,
+                    " COUNT(*) > " + Config.MIN_RESULT_COUNT,
+                    SalaryEntry.SALARIES_PERIOD);
+            List<ChartItem> res = buildLineChartItem(cursor);
+            cursor.close();
+            return res;
+        });
     }
 
     @Override
     public Observable<List<ChartItem>> getSalaryForDemographic(final long period) {
-        return  Observable.fromCallable(new Callable<List<ChartItem>>(){
-            @Override
-            public List<ChartItem> call() throws Exception {
-                List<ChartItem> res = new ArrayList<>();
-                addChartItem(res, buildAgeChartItem(db, period));//age
-                addChartItem(res, buildJobsPopularityChartItem(db, period));//jobs popularity
-                addChartItem(res, buildExperienceChartItem(db, period));//experience
-                addChartItem(res, buildPieChartItem(db, period,
-                        DemographicsType.GENDER, DemographicsType.GENDER.getName())); //gender
-                addChartItem(res, buildPieChartItem(db, period,
-                        DemographicsType.ENG_LEVEL, DemographicsType.ENG_LEVEL.getName()));//english level
-                addChartItem(res, buildCityChartItem(db, period));//city
-                addChartItem(res, buildPieChartItem(db, period,//education
-                        DemographicsType.EDUCATION, DemographicsType.EDUCATION.getName()));//companySize
-                addChartItem(res, buildPieChartItem(db, period,
-                        DemographicsType.COMPANY_SIZE, DemographicsType.COMPANY_SIZE.getName()));
-                addChartItem(res, buildPieChartItem(db, period,
-                        DemographicsType.COMPANY_TYPE, DemographicsType.COMPANY_TYPE.getName())); //companyType
-                return res;
-            }
-        } );
+        return  Observable.fromCallable(() -> {
+            List<ChartItem> res = new ArrayList<>();
+            addChartItem(res, buildAgeChartItem(db, period));//age
+            addChartItem(res, buildJobsPopularityChartItem(db, period));//jobs popularity
+            addChartItem(res, buildExperienceChartItem(db, period));//experience
+            addChartItem(res, buildPieChartItem(db, period,
+                    DemographicsType.GENDER, DemographicsType.GENDER.getName())); //gender
+            addChartItem(res, buildPieChartItem(db, period,
+                    DemographicsType.ENG_LEVEL, DemographicsType.ENG_LEVEL.getName()));//english level
+            addChartItem(res, buildCityChartItem(db, period));//city
+            addChartItem(res, buildPieChartItem(db, period,//education
+                    DemographicsType.EDUCATION, DemographicsType.EDUCATION.getName()));//companySize
+            addChartItem(res, buildPieChartItem(db, period,
+                    DemographicsType.COMPANY_SIZE, DemographicsType.COMPANY_SIZE.getName()));
+            addChartItem(res, buildPieChartItem(db, period,
+                    DemographicsType.COMPANY_TYPE, DemographicsType.COMPANY_TYPE.getName())); //companyType
+            return res;
+        });
     }
 
     /** do not add chart item without data*/
