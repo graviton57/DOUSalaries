@@ -17,7 +17,6 @@ import com.havrylyuk.dou.R;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -35,10 +34,6 @@ public class AppUtils {
 
     public static final DateTimeFormatter FILES_FORMATTER =
             DateTimeFormat.forPattern(Config.CHART_DATE_FORMAT).withLocale(Locale.US);
-    public static final SimpleDateFormat formatTo =
-            new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault());
-    public static final  SimpleDateFormat formatFromItemList =
-            new SimpleDateFormat("dd MMMM yyyy, HH:mm", Locale.getDefault());
 
     private static final String EXP_OVER_10_YEARS = "10"; //over 11 years
     private static final String EXP_LESS_3_MONTH = "0"; //less than 3 month's
@@ -177,11 +172,9 @@ public class AppUtils {
      */
     public static String renameCity(@NonNull Context context, @NonNull String city){
         if (context.getString(R.string.city_kirovograd).equals(city)){
-            //Timber.d("city=%s, new city=%s", city, context.getString(R.string.city_kropiv));
             return context.getString(R.string.city_kropiv);
         }
         if (context.getString(R.string.city_dnipropetrovsk).equals(city)){
-            //Timber.d("city=%s, new city=%s", city, context.getString(R.string.city_dnipro));
             return context.getString(R.string.city_dnipro);
         }
         return city;

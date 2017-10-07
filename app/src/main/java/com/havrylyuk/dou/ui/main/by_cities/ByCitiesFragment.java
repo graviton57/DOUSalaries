@@ -154,19 +154,6 @@ public class ByCitiesFragment extends BaseFragment implements ByCitiesMvpView,
         });
     }
 
-/*
-    public void updateData(){
-        try {
-            showRecycler(true);
-            final String[] periodKey = getResources().getStringArray(R.array.array_period_date);
-            long period = AppUtils.convertDate(periodKey[periodIndex]);
-            presenter.loadChartItems(period);
-        } catch (IllegalArgumentException | UnsupportedOperationException e) {
-            e.printStackTrace();
-        }
-    }
-*/
-
     @Override
     protected void updateData() {
         try {

@@ -27,8 +27,6 @@ public class PieChartItem extends ChartItem {
     public PieChartItem(Context context, ChartData<?> cd,  String centerText) {
         super(cd);
         this.typeface = Typeface.createFromAsset(context.getAssets(), "fonts/OpenSans-Regular.ttf");
-       // this.typeface = ResourcesCompat.getF(this, R.fo.tangerine_regular)
-
         this.centerText = generateCenterText(centerText);
     }
 
