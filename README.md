@@ -5,6 +5,9 @@ Developers salaries in Ukraine. The data is based on anonymous survey by [DOU.UA
  
  Salary surveys CSV data: https://github.com/devua/csv/tree/master/salaries. 
 
+## Application concept:
+
+![alt text](art/arch.png "Application concept")
 
 ## Preview
 
