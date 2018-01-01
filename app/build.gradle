@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
-apply plugin: 'me.tatarka.retrolambda'
 apply from: '../api.gradle'
 apply from: '../dependencies.gradle'
 
@@ -140,7 +139,7 @@ dependencies {
     compile "com.google.firebase:firebase-core:$fireBaseVersion"
     compile "com.google.firebase:firebase-crash:$fireBaseVersion"
     //Multidex
-    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.2'
 
     //LeakCanary
     debugCompile "com.squareup.leakcanary:leakcanary-android:$leakCanaryVersion"

@@ -1,13 +1,13 @@
 ext {
     // Library dependencies
-    supportVersion = '26.1.0'
+    supportVersion = '27.0.2'
     retrofitVersion = '2.1.0'
     okhttpVersion = '3.4.1'
     okHttpLoggingVersion = '3.2.0'
     retrofitRxJavaAdapter = '1.0.0'
 
-    timberVersion = '4.3.1'
-    butterKnifeVersion = '8.4.0'
+    timberVersion = '4.5.1'
+    butterKnifeVersion = '8.8.1'
     daggerVersion = '2.5'
 
     rxJava2Version = '2.0.5'
@@ -29,10 +29,10 @@ ext {
     androidMPChart = 'v3.0.2'
     eventBusVersion = '3.0.0'
     jodaTimeVersion = '2.9.1'
-    frescoVersion = '1.1.0'
+    frescoVersion = '1.3.0'
 
-    fireBaseJobDispatcher = '0.8.2'
-    fireBaseVersion = '11.4.2'
+    fireBaseJobDispatcher = '0.8.5'
+    fireBaseVersion = '11.8.0'
 
     leakCanaryVersion = '1.5.1'
 
